@@ -1,9 +1,6 @@
-//importación de React y Hooks
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Col, Container, Row} from "react-bootstrap";
 import logo from "../assets/logo-happy.png"
-
-//importacion de helpers
 import Result from '../components/Result'
 import { fetchData } from '../helpers/dataFetch';
 
@@ -25,8 +22,6 @@ const Home = () => {
     }
   }
  
-  //useEffect(() => console.table(result), [result]);
-
   return (
     <Container>
       <Row className="justify-content-center align-items-center min-vh-100">
