@@ -18,7 +18,6 @@ const Home = () => {
       }
     }
   }
-
   return (
     <Container>
       <Row className="justify-content-center align-items-center min-vh-100">
@@ -42,7 +41,11 @@ const Home = () => {
                       />
                     </div>
                     <div>
+<<<<<<< HEAD
                       <Result result={result} />
+=======
+                      <Result result={result}/>
+>>>>>>> be3e00febea57f55dd7d476c8bc7b1901e38d031
                     </div>
                   </div>
                 </div>
