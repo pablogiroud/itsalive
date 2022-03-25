@@ -19,6 +19,8 @@
 ## DevDependencies:
     - "jest-watch-typeahead": "^0.6.5"
 
+## [Heroku] (https://its-still-alive.herokuapp.com/)
+
 ## Available Scripts
 
 In the project directory, you can run:
