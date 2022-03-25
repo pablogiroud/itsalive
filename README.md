@@ -14,6 +14,9 @@
     - "react-scripts": "5.0.0",
     - "web-vitals": "^2.1.4"
 
+## DevDependencies:
+    - "jest-watch-typeahead": "^0.6.5"
+
 ## Available Scripts
 
 In the project directory, you can run:

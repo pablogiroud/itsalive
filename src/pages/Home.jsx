@@ -1,27 +1,23 @@
 import React, { useState } from 'react'
-import { Col, Container, Row} from "react-bootstrap";
-import logo from "../assets/logo-happy.png"
+import { Col, Container, Row } from 'react-bootstrap'
+import logo from '../assets/logo-happy.png'
 import Result from '../components/Result'
-import { fetchData } from '../helpers/dataFetch';
+import { fetchData } from '../helpers/dataFetch'
 
 const Home = () => {
- 
   const [result, setResult] = useState('')
 
   async function handleSearch(e) {
-    if(e.key === 'Enter'){
-      const { value } = e.target;
+    if (e.key === 'Enter') {
+      const { value } = e.target
       const resp = await fetchData(value)
-      if(!resp.results.bindings[0].RIP){
-        console.log(`${value} sigue vivo`)
+      if (!resp.results.bindings[0].RIP) {
         setResult(`${value} sigue vivo`)
-      }else{
-        console.log(`${value} fallecio el: ${resp.results.bindings[0].RIP.value}`)
+      } else {
         setResult(`${value} fallecio el: ${resp.results.bindings[0].RIP.value}`)
       }
     }
   }
- 
   return (
     <Container>
       <Row className="justify-content-center align-items-center min-vh-100">
@@ -34,12 +30,18 @@ const Home = () => {
                 </div>
                 <div className="p-5">
                   <div className="text-center">
-                    <h1 className="mb-4"><b>¿Sigue vivo?</b></h1>
-                    <div className='mb-4'>
-                      <input type="text" className="inputCommon" onKeyUp={handleSearch} />
+                    <h1 className="mb-4">
+                      <b>¿Sigue vivo?</b>
+                    </h1>
+                    <div className="mb-4">
+                      <input
+                        type="text"
+                        className="inputCommon"
+                        onKeyUp={handleSearch}
+                      />
                     </div>
                     <div>
-                      <Result result={result}/>
+                      <Result result={result} />
                     </div>
                   </div>
                 </div>

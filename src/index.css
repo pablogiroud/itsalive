@@ -1,7 +1,6 @@
 body {
   background: rgb(255, 255, 255)
-    linear-gradient(to right, black, rgb(55, 54, 54)) repeat
-    scroll 0% 0% !important;
+    linear-gradient(to right, black, rgb(55, 54, 54)) repeat scroll 0% 0% !important;
 }
 
 .img-logo {
@@ -17,7 +16,7 @@ body {
   text-align: left;
 }
 /* ============Product Table=============*/
-.search-table{
+.search-table {
   width: 60vw;
   margin-right: 10px;
   color: white;
@@ -39,14 +38,14 @@ body {
   border-radius: 3px !important;
   padding: 10px !important;
   height: auto !important;
-  color: #253337 !important
+  color: #253337 !important;
 }
 
 .bg-img {
   background-color: #253337;
 }
 
-.img-side-box{
+.img-side-box {
   display: flex;
   align-items: center;
   align-content: center;

@@ -1,7 +1,6 @@
 import React from 'react'
 
-function Result({result}) {
-  console.log(result.result)
+function Result({ result }) {
   return (
     <div className="row">
       <div className="col">
