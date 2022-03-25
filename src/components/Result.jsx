@@ -1,7 +1,6 @@
 import React from 'react'
 
-function ResultsList({result}) {
-  console.log(result.result)
+function Result({ result }) {
   return (
     <div className="row">
       <div className="col">
@@ -13,4 +12,4 @@ function ResultsList({result}) {
   )
 }
 
-export default ResultsList
+export default Result

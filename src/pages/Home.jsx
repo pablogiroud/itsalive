@@ -1,31 +1,23 @@
-//importación de React y Hooks
-import React, { useState, useEffect } from 'react'
-import { Col, Container, Row} from "react-bootstrap";
-import logo from "../assets/logo-happy.png"
-
-//importacion de helpers
-import ResultsList from '../components/ResultsList'
-import { fetchData } from '../helpers/dataFetch';
+import React, { useState } from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
+import logo from '../assets/logo-happy.png'
+import Result from '../components/Result'
+import { fetchData } from '../helpers/dataFetch'
 
 const Home = () => {
- 
   const [result, setResult] = useState('')
 
   async function handleSearch(e) {
-    if(e.key === 'Enter'){
-      const { value } = e.target;
+    if (e.key === 'Enter') {
+      const { value } = e.target
       const resp = await fetchData(value)
-      if(!resp.results.bindings[0].RIP){
-        console.log(`${value} sigue vivo`)
+      if (!resp.results.bindings[0].RIP) {
         setResult(`${value} sigue vivo`)
-      }else{
-        console.log(`${value} fallecio el: ${resp.results.bindings[0].RIP.value}`)
+      } else {
         setResult(`${value} fallecio el: ${resp.results.bindings[0].RIP.value}`)
       }
     }
   }
- 
-  //useEffect(() => console.table(result), [result]);
 
   return (
     <Container>
@@ -39,12 +31,18 @@ const Home = () => {
                 </div>
                 <div className="p-5">
                   <div className="text-center">
-                    <h1 className="mb-4"><b>¿Sigue vivo?</b></h1>
-                    <div className='mb-4'>
-                      <input type="text" className="inputCommon" onKeyUp={handleSearch} />
+                    <h1 className="mb-4">
+                      <b>¿Sigue vivo?</b>
+                    </h1>
+                    <div className="mb-4">
+                      <input
+                        type="text"
+                        className="inputCommon"
+                        onKeyUp={handleSearch}
+                      />
                     </div>
                     <div>
-                      <ResultsList result={result}/>
+                      <Result result={result} />
                     </div>
                   </div>
                 </div>
