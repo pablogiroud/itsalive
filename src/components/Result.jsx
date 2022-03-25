@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ResultsList({result}) {
+function Result({result}) {
   console.log(result.result)
   return (
     <div className="row">
@@ -13,4 +13,4 @@ function ResultsList({result}) {
   )
 }
 
-export default ResultsList
+export default Result
