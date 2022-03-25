@@ -4,7 +4,7 @@ import { Col, Container, Row} from "react-bootstrap";
 import logo from "../assets/logo-happy.png"
 
 //importacion de helpers
-import ResultsList from '../components/ResultsList'
+import Result from '../components/Result'
 import { fetchData } from '../helpers/dataFetch';
 
 const Home = () => {
@@ -44,7 +44,7 @@ const Home = () => {
                       <input type="text" className="inputCommon" onKeyUp={handleSearch} />
                     </div>
                     <div>
-                      <ResultsList result={result}/>
+                      <Result result={result}/>
                     </div>
                   </div>
                 </div>
