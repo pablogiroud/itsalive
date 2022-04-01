@@ -6,18 +6,28 @@ import { fetchData } from '../helpers/dataFetch'
 
 const Home = () => {
   const [result, setResult] = useState('')
+  const [resultImg, setResultImg] = useState('')
 
   async function handleSearch(e) {
     if (e.key === 'Enter') {
       const { value } = e.target
       const resp = await fetchData(value)
       if (!resp.results.bindings[0].RIP) {
-        setResult(`${value} sigue vivo`)
-      } else {
-        setResult(`${value} fallecio el: ${resp.results.bindings[0].RIP.value}`)
+        if (resp.results.bindings[0].image.value === null && resp.results.bindings[0].image.value === 0){
+          setResultImg(require('../assets/logo-death.png'))
+        } else {
+          setResultImg(resp.results.bindings[0].image.value)
+          setResult(`${value} sigue vive`)
+        }
       }
+      setResultImg(resp.results.bindings[0].image.value)
+      setResult(`${value} fallecio el: ${resp.results.bindings[0].RIP.value}`)
+      console.log(resp)
     }
   }
+
+  console.log(resultImg)
+
   return (
     <Container>
       <Row className="justify-content-center align-items-center min-vh-100">
@@ -41,7 +51,7 @@ const Home = () => {
                       />
                     </div>
                     <div>
-                      <Result result={result} />
+                      <Result result={result} resultImg={resultImg} />
                     </div>
                   </div>
                 </div>
