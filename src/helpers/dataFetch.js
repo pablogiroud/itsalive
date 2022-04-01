@@ -9,6 +9,10 @@ export const fetchData = async (val) => {
         const response = await fetch(`${url1}${nameCap}${url2}`, {
             headers : { 'Accept': 'application/sparql-results+json' }
         })
+        .catch(err => {
+            console.log('caught it!',err)
+        })
+
         if (!response.ok) {
             throw Error(response.statusText)
         }
