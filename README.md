@@ -1,5 +1,7 @@
 # ¿Sigue Vivo?
 ## little app to check if people still alive
+### We use sparql query to obtain info from wikidata
+### Check [wikidata](https://query.wikidata.org)
 
 ## Dependencies:
     - "@testing-library/jest-dom": "^5.16.2",
@@ -16,6 +18,8 @@
 
 ## DevDependencies:
     - "jest-watch-typeahead": "^0.6.5"
+
+## [Heroku] (https://its-still-alive.herokuapp.com/)
 
 ## Available Scripts
 
