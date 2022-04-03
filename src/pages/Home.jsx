@@ -3,11 +3,12 @@ import { Col, Container, Row } from 'react-bootstrap'
 import logo from '../assets/logo-happy.png'
 import Result from '../components/Result'
 import { fetchData } from '../helpers/dataFetch'
+import dateFormat from "dateformat";
 
 const Home = () => {
   const [result, setResult] = useState('')
   const [resultImg, setResultImg] = useState('')
-
+  
   async function handleSearch(e) {
     if (e.key === 'Enter') {
       const { value } = e.target
@@ -19,10 +20,12 @@ const Home = () => {
           setResultImg(resp.results.bindings[0].image.value)
           setResult(`${value} sigue vive`)
         }
+      }else{
+        let date = resp.results.bindings[0].RIP.value
+        let ripDate = dateFormat(date, 'dd/mm/yyyy');
+        setResultImg(resp.results.bindings[0].image.value)
+        setResult(`${value} falleció el ${ripDate}`)
       }
-      setResultImg(resp.results.bindings[0].image.value)
-      setResult(`${value} fallecio el: ${resp.results.bindings[0].RIP.value}`)
-      console.log(resp)
     }
   }
 
