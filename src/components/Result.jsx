@@ -1,7 +1,6 @@
 import React from 'react'
 
 function Result({result, resultImg}) {
-  console.log(resultImg)
   return (
     <div className="row">
       <div className="col">
