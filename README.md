@@ -1,5 +1,6 @@
-# ¿Sigue Vivo?
+# [¿Sigue Vivo?](https://itsalive.netlify.app/)
 ## little app to check if people still alive
+### hosted by [netlify](https://www.netlify.com/)
 ### We use sparql query to obtain info from wikidata
 ### Check [wikidata](https://query.wikidata.org)
 
@@ -19,8 +20,6 @@
 ## DevDependencies:
     - "jest-watch-typeahead": "^0.6.5"
 
-## [Heroku] (https://its-still-alive.herokuapp.com/)
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -28,7 +27,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open local [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
