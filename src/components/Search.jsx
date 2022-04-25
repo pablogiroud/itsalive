@@ -32,7 +32,7 @@ const Search = () => {
                     setResult(`${value} falleció el ${ripDate}`)
                 }
             } catch (error) {
-                setResult(`A la wiki no le suena ese nombre, proba escribiendo bien el nombre.`)
+                setResult(`A la wiki no le suena ese nombre, fijate si esta bien escrito.`)
             }
         }
     }
@@ -59,9 +59,9 @@ const Search = () => {
                                 onKeyUp={handleSearch}
                             />
                         </div>
-                        <div>
-                            <p>checkea si la persona que estas pensando sigue con vida.</p>
-                            <p>Fijate de escribir bien el nombre, y recorda que la info viene de wikipedia.</p>
+                        <div className="m-4">
+                            <p>Fijate de escribir bien el nombre</p>
+                            <p>la info viene directo de wikipedia.</p>
                         </div>
                     </div>
 
