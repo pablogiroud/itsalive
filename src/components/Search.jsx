@@ -65,8 +65,8 @@ const Search = () => {
                         </div>
                     </div>
                 }
-                <Result result={result} resultImg={resultImg} />
             </div>
+            <Result result={result} resultImg={resultImg} />
         </>
     )
 }
