@@ -64,10 +64,9 @@ const Search = () => {
                             <p>la info viene directo de wikipedia.</p>
                         </div>
                     </div>
-
                 }
+                <Result result={result} resultImg={resultImg} />
             </div>
-            <Result result={result} resultImg={resultImg} />
         </>
     )
 }

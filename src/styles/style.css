@@ -42,6 +42,13 @@ body {
     margin-bottom: 5%;
 }
 
+footer {
+    position: fixed;
+    height: 60px;
+    bottom: 0;
+    width: 100%;
+}
+
 /*------Results----------*/
 
 .resultImg {
